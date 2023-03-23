@@ -1,0 +1,260 @@
+body {
+  background-color: rgb(29, 29, 29);
+}
+
+header, main, .div-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primeirosButton {
+  display: flex;
+}
+
+h1, h2 {
+  font-family: 'Satisfy', cursiva;
+  color: #ffffff;
+}
+
+P {
+  font-family: 'Fredoka One', cursive;
+  color: #ffffff;
+}
+
+.div-button {
+  display: flex;
+}
+
+button {
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #ffc400;
+  letter-spacing: 2px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+}
+   
+button:hover {
+  box-shadow: 0 0 5px #ffc400, 0 0 5px rgb(255, 174, 0), 0 0 5px #ffc400;
+  transition-delay: 0.6s;
+}
+   
+button span {
+  position: absolute;
+}
+   
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffc400);
+}
+   
+button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+}
+   
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d0ff00);
+}
+   
+button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+}
+   
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(255, 153, 0));
+}
+   
+button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+}
+   
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ffc400);
+}
+   
+button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+   
+button:active {
+  background: #ffffff;
+  background: linear-gradient(to top right, #ffc400, #e5ff00);
+  color: #ffffff;
+  box-shadow: 0 0 8px #ffc400, 0 0 8px #e5ff00, 0 0 8px #ffc400;
+  transition: 0.1s;
+}
+   
+button:active span:nth-child(1) 
+span:nth-child(2) 
+span:nth-child(2) 
+span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+}
+   
+
+/*CARD*/
+
+.div-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 130px;
+}
+
+.card-total {
+  width: 500px;
+  height: 197px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  font-family: 'Satisfy', cursiva;
+}
+
+.h2div-total {
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+
+#fotoJAVA {
+  width: 50px;
+  height: 50px;
+}
+
+.card {
+  overflow: visible;
+  width: 142px;
+  height: 197px;
+  }
+  
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #050505ce;
+  border-radius: 5px;
+}
+  
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+  
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+  
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ffc400, #ffc400, #ffc400, #ffc400, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+  
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+  
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+  
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+/*LAYOUT CELULAR 429px*/
+
+@media screen and (max-width: 429px) {
+
+header {
+  padding-bottom: 90px;
+}
+
+p {
+  text-align: center;
+  width: 329px;
+}
+
+#fotoJAVA {
+  width: 30px;
+  height: 30px;
+}
+
+.card {
+  overflow: visible;
+  width: 99px;
+  height: 150px;
+}
+
+.card-total {
+  width: 325px;
+  height: 197px;
+}
+
+}
