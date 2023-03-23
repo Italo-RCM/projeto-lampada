@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!--FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <title>PROJETO LÂMPADA</title>
+    </head>
+    <body>
+        <header>
+            <h1>Projeto Lâmpada</h1>
+            <p>Projeto com intuito de me ajudar a aprimorar meus conhecimentos.</p>
+        </header>
+        
+        <main>
+            <div>
+                <img src="img/desligada.png" alt="Lâmpada desligada" id="lampada">
+            </div>
+
+            <div class="div-button">
+                <div class="primeirosButton">
+                    <button id="buttonOn"
+                    style="display: block;"
+                    onmousedown="somLampadaLigar.play()">
+                        <span></span>
+                        <span></span>
+                        <span></span>Ligar
+                    </button>
+                    
+                    <button id="buttonOff"
+                    style="display: block;"
+                    onmousedown="somLampadaLigar.play()">
+                        <span></span>
+                        <span></span>
+                        <span></span>Desligar
+                    </button>
+                </div>
+
+                <div>
+                    <button id="buttonQuebrar"
+                    style="display: block;"
+                    onmousedown="somLampadaQuebrar.play()"
+                        onclick="
+                        sumirButtonConcertar(),
+                        sumirButtonLigar(),
+                        sumirButtonDesligar(),
+                        sumirButtonQuebrar()">
+                        <span></span>
+                        <span></span>
+                        <span></span>Tacar Pedra na Lâmpada
+                    </button>
+                </div>
+
+                <button id="buttonConcertar"
+                style="display: none;"
+                onmousedown="somLampadaTrocar.play()"
+                    onclick="
+                    sumirButtonConcertar(),
+                    sumirButtonLigar(),
+                    sumirButtonDesligar(),
+                    sumirButtonQuebrar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>Concertar Lâmpada
+                </button>
+            </div>
+
+            <div class="div-card">         
+              <h2 class="h2div-total">Feito com:</h2>
+              <div class="card-total">
+                <div class="card">
+                  <div class="content">
+                    <div class="back">
+                      <div class="back-content"> <i class="fa-brands fa-square-js"></i>
+                          <img src="img/logo-item-HTML.png" alt="Lâmpada desligada" id="fotoJAVA">
+                        <strong>HTML</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="content">
+                    <div class="back">
+                      <div class="back-content"> <i class="fa-brands fa-square-js"></i>
+                          <img src="img/logo-item-CSS.png" alt="Lâmpada desligada" id="fotoJAVA">
+                        <strong>CSS</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content"> <i class="fa-brands fa-square-js"></i>
+                            <img src="img/logo-item-JS.png" alt="Lâmpada desligada" id="fotoJAVA">
+                          <strong>JAVASCRIPT</strong>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </main>
+
+        <script src="./lampada.js"></script>
+    </body>
+</html>
